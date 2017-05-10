@@ -1,0 +1,22 @@
+table {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 20px;
+    width: 70%;
+}
+
+th {
+     height: 50px;
+     border: 1px solid black;
+     text-align: center;
+     vertical-align: middle;
+}
+
+ td {
+     height: 50px;
+     border: 1px solid black;
+     padding: 5px;
+     margin: 20px;
+     text-align: center;
+     vertical-align: middle;
+ }
