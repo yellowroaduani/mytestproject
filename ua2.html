@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf8">
+        <title>Kávézó</title>
+        <link rel='stylesheet' type='text/css' href='styles/ua2.css'>
+        <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+    <body>
+        <header class='header'>
+            <h1>Kávék</h1>
+        </header>
+        <div class="navbar">
+            <div>
+                <label for="search">Kereshetsz a kávék közt: &nbsp</label>
+                <input type="text" id="search">
+                &nbsp &nbsp
+                <button onclick="keres()"><span class='glyphicon glyphicon-search'></span> &nbsp Keresés</button>
+            </div>
+
+            <div>
+                <label for="orig">Származási hely szerinti szűrés &nbsp</label>
+                <select id="orig">
+                    <option>Australia</option>
+                    <option>Austria</option>
+                    <option>Columbia</option>
+                    <option>Ethiopia</option>
+                    <option>France</option>
+                    <option>Italy</option>
+                    <option>Jamaica</option>
+                    <option>Jemen</option>
+                    <option>Kenya</option>
+                    <option>Mexico</option>
+                    <option>Spain</option>
+                    <option>Turkey</option>
+                </select>
+                <button onclick='cancel()'>Szűrés törlése</button>
+            </div>
+
+            <div>
+                <label for="stre">Erősség szerinti szűrés &nbsp</label>
+                <select id="stre">
+                    <option value='gyenge'>Gyenge intenzitásúak</option>
+                    <option value='kozepes'>Közepes intenzitásúak</option>
+                    <option value='eros'>Erős intenzitásúak</option>
+                </select>
+                <button onclick='csoportosit()'>Szűrés</button>
+                <button onclick='cancel()'>Szűrés törlése</button>
+            </div>
+        <div class="list">
+            <table id="tablazat">
+                <thead>
+                    <tr>
+                        <th>Név
+                            <button onclick='sortName()'><span class='glyphicon glyphicon-arrow-down'></span></button>
+                            <button onclick='sortNameRev()'><span class='glyphicon glyphicon-arrow-up'></span></button>
+                            </th> 
+                        <th>Ország
+                            <button onclick='sortOrig()'><span class='glyphicon glyphicon-arrow-down'></span></button>
+                            <button onclick='sortOrigRev()'><span class='glyphicon glyphicon-arrow-up'></span></button>
+                        </th>
+                        <th>Erősség
+                            <button onclick='sortStre()'><span class='glyphicon glyphicon-arrow-down'></span></button>
+                            <button onclick='sortStreRev()'><span class='glyphicon glyphicon-arrow-up'></span></button>
+                        </th>
+                        <th>Készlet
+                            <button onclick='sortInst()'><span class='glyphicon glyphicon-arrow-down'></span></button>
+                            <button onclick='sortInstRev()'><span class='glyphicon glyphicon-arrow-up'></span></button>
+                        </th>
+                        <th>Vásárlás</th>
+                    </tr>
+                </thead>
+                <tbody id="coffeetable">
+                </tbody>
+            </table>
+        </div>
+        <div class="kosar" id="kosar">
+        </div>
+        <script src="scripts/ua2.js"></script>   
+    </body>
+    </html>

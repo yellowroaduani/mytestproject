@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf8">
+        <title>Kávézó</title>
+        <link rel='stylesheet' type='text/css' href='styles/ua.css'>
+        <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+    <body>
+        <header class='header'>
+            <h1>Kávék</h1>
+        </header>
+        <div class="navbar">
+            Kereshetsz a kávék közt: &nbsp<label for="search"></label>
+            <input type="text" id="search">
+            &nbsp &nbsp
+            <button onclick="keres()"><span class='glyphicon glyphicon-search'></span> &nbsp Keresés</button>
+        </div>
+
+        <div class="list">
+            <table id="tablazat">
+                <thead>
+                    <tr>
+                        <th>Név</th> 
+                        <th>Ország</th>
+                        <th>Erősség</th>
+                        <th>Készlet</th>
+                    </tr>
+                </thead>
+                <tbody id="coffeetable">
+                </tbody>
+            </table>
+        </div> 
+        <script src="scripts/ua.js"></script>   
+    </body>
+    </html>
